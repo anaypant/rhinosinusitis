@@ -1,0 +1,6 @@
+I will provide you with a patient history summary and a list of available clinical tests.
+Based on EPOS 2020 rhinosinusitis guidelines, recommend tests most appropriate for the patient. Choose only from the provided list.
+Your response should include:
+-The name of the test.
+-A concise explanation of why the test is recommended.
+-Avoid unnecessary elaboration. I'll now provide both the summary and tests:

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Conversation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+        #chat-box {
+            width: 80%;
+            height: 60vh;
+            border: 1px solid #ccc;
+            background: #fff;
+            overflow-y: auto;
+            margin-bottom: 20px;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0,0,0,0.1);
+        }
+        .user-message {
+            text-align: right;
+            margin: 10px 0;
+        }
+        .assistant-message {
+            text-align: left;
+            margin: 10px 0;
+        }
+        #user-input {
+            width: 80%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 0 2px rgba(0,0,0,0.1);
+        }
+        #submit-button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            border: none;
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0,0,0,0.1);
+        }
+        #submit-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div id="chat-box"></div>
+    <input type="text" id="user-input" placeholder="Type your message here...">
+    <button id="submit-button">Send</button>
+
+    <script>
+        const chatBox = document.getElementById("chat-box");
+        const userInput = document.getElementById("user-input");
+        const submitButton = document.getElementById("submit-button");
+    
+        function appendMessage(role, content) {
+            const messageDiv = document.createElement("div");
+            messageDiv.className = role === "user" ? "user-message" : "assistant-message";
+            messageDiv.textContent = `${role.charAt(0).toUpperCase() + role.slice(1)}: ${content}`;
+            chatBox.appendChild(messageDiv);
+            chatBox.scrollTop = chatBox.scrollHeight;
+        }
+    
+        // Fetch the start message from the server
+        fetch("/converse", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({ user_input: "~~~~~" })
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log(data)
+            if (data.response) {
+                appendMessage("assistant", data.response);
+            } else {
+                console.error("Error fetching start message:", data.error || "Unknown error");
+            }
+        })
+        .catch(error => console.error("Fetch error:", error));
+    
+        submitButton.addEventListener("click", async () => {
+            const userMessage = userInput.value.trim();
+            if (userMessage) {
+                appendMessage("user", userMessage);
+                userInput.value = "";
+    
+                const response = await fetch("/converse", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({ user_input: userMessage })
+                });
+    
+                const data = await response.json();
+                if (data.response) {
+                    appendMessage("assistant", data.response);
+                    // if end is True, then the conversation is over
+                    if (data.end) {
+                        // call export conversation API
+                        const exportResponse = await fetch("/export", {
+                            method: "GET",
+                            headers: {
+                                "Content-Type": "application/json"
+                            }
+                        });
+                        alert("Conversation is over. You can download the results from the server.");
+                    }
+
+                } else if (data.error) {
+                    alert(data.error);
+                }
+            }
+        });
+
+        
+    </script>
+    </body>
+</html>

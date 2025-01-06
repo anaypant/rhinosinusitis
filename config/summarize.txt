@@ -1,0 +1,7 @@
+I will provide you with a transcript of a conversation between a nurse and a patient.
+
+Your task is to produce a concise summary suitable for a specialist, capturing all relevant details about the patient's symptoms, history, and any additional context necessary for clinical decision-making.
+
+Keep the summary professional and focused. 
+
+

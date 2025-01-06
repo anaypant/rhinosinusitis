@@ -1,0 +1,9 @@
+These are the tests available to recommend from:
+
+Imaging: CT Scan, MRI, Endoscopic Evaluation, Nasal Endoscopy
+Allergy: Skin Prick Test, IgE Blood Test, 
+Microbiological: Sinus Culture, Nasal Swab, 
+Functional: Ciliary Function Tests, Saccharin Test
+Biochemical and Inflammatory Markers: CRP, ESR, Eosinophil Count
+Specialized Tests: Sweat Chloride Test, Genetic Testing, ASA (Aspirin Sensitivity Test)
+Other Tests: Smell Identification Test, pH Testing, Pulmonary Function Test
