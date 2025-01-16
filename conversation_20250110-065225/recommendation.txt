@@ -1,0 +1,4 @@
+1. **Nasal Endoscopy**: To directly visualize the nasal passages and sinuses for signs of inflammation, obstruction, or other abnormalities contributing to the patient's symptoms.
+2. **Sinus Culture**: To identify any bacterial infection that may be causing or exacerbating the patient's chronic sinusitis symptoms.
+3. **Smell Identification Test**: To assess the degree of olfactory dysfunction, as the patient reports a noticeable decrease in their sense of smell.
+4. **Skin Prick Test** or **IgE Blood Test**: To evaluate for allergic rhinitis, which could be a contributing factor to the recurrent episodes of symptoms suggestive of chronic sinusitis.

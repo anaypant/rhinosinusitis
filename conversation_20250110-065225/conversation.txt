@@ -1,0 +1,76 @@
+assistant:
+Can you please tell me what brings you here today, specifically regarding any sinus issues or concerns you're experiencing? 
+
+
+user:
+I have a slight runny nose and I'm coughing a lot
+
+assistant:
+It sounds like you're dealing with some uncomfortable symptoms. Have you been experiencing any facial pain or pressure, particularly around your cheeks or forehead, along with your runny nose and cough?
+
+user:
+I haven't been feeling any facial pressure.
+
+assistant:
+That helps to narrow it down a bit. Are you noticing that your cough is worse at night or when you lie down, and is it producing any mucus or phlegm?
+
+user:
+It's pretty constant throughout the day, and I'm having a lot of mucus.
+
+assistant:
+Constant production of mucus can be quite bothersome. Is your sense of smell affected in any way, meaning do you have a reduced ability to smell things compared to normal?
+
+user:
+Yes, I have noticed I can't smell my food as well
+
+assistant:
+Loss of smell can definitely impact daily life. Have you had a fever or felt generally unwell, aside from the respiratory symptoms we've discussed so far?
+
+user:
+I've had a slight fever some for a week or so, but it's died down now
+
+assistant:
+So the fever has subsided, but you're still dealing with the other symptoms. Have you recently traveled, been exposed to anyone sick, or experienced any allergies that might be contributing to how you're feeling?
+
+user:
+I've not traveled recently.
+
+assistant:
+That helps rule out travel-related exposures. Do you have any pre-existing conditions, such as asthma, or take any regular medications that could be relevant to your current symptoms?
+
+user:
+Like what?
+
+assistant:
+Things like allergies, deviated septum, nasal polyps, or previous sinus surgeries might be important to know about. Also, any medications you're taking regularly, including over-the-counter ones, could potentially affect your sinuses. Did you want to start by telling me about any known allergies you have?
+
+user:
+No, I'm not really taking any mediation and don't have any allergies
+
+assistant:
+That simplifies things. Now, looking back on your symptoms, approximately how long have you been experiencing the runny nose, cough, and loss of smell that brought you here today?
+
+user:
+About three weeks now
+
+assistant:
+Three weeks is a significant duration for these symptoms. Have you tried any treatments or remedies on your own, such as over-the-counter decongestants, saline rinses, or humidifiers, to help manage your symptoms?
+
+user:
+No treatments
+
+assistant:
+We'll consider all options moving forward. Based on what you've shared, I think I have a good understanding of your situation. Would you like me to summarize your symptoms and discuss potential next steps with you?
+
+user:
+Yes thank you
+
+assistant:
+I'd be happy to summarize and discuss further. However, before proceeding, I just need to confirm one last detail: Have you experienced any episodes of similar symptoms in the past, suggesting possible recurrent or chronic sinus issues?
+
+user:
+Yes I get this about 4 times a year
+
+assistant:
+That pattern suggests a recurring condition. Given your history of frequent episodes, it seems we have a thorough understanding of your situation. :::EOM:::
+
